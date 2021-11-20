@@ -4,4 +4,8 @@ This is a simple web application that makes use of the open source PivotTable.js
 
 To use this web application, just upload any .csv file and its pivot table will be displayed to analyze as per the user's requirements.
 
+A Sample Demo GIF of the Pivot Table:
+
+![til](https://github.com/deepkchoudhary/pivot-table/blob/main/images/pivot-table-example.gif)
+
 Few Images of the Web Application are as follows:
