@@ -1,0 +1,55 @@
+<!doctype html>
+
+<head>
+	<link rel="stylesheet" href="../static/style.css">
+	<title>PivotTable.js</title>
+	<!-- external libs from cdnjs -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="../static/jquery.csv.js"></script>
+
+	<!-- PivotTable.js libs from ../dist -->
+	<script type="text/javascript" src="../static/pivot.js"></script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../static/gchart_renderers.js"></script>
+
+	<!-- optional: mobile support with jqueryui-touch-punch -->
+	<script type="text/javascript"
+	  src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  
+	<link rel="stylesheet" type="text/css" href="../static/pivot.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<center>
+	<br />
+	<h1> Data Visualization using Pivot Table</h1>
+	<h2>Upload CSV File And Start Analysing The Data</h2><br />
+
+	<form method="post" action="/" enctype="multipart/form-data">
+		<input type="file" name="file" autocomplete="off" required>
+		<button type="submit" class="btn btn-success">Upload</button>
+		<a href="{{ url_for('upload_file') }}" class="btn btn-danger" role="button" aria-pressed="true">Reset</a>
+	</form>
+</center>
+
+<div style="text-align:center">
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in get_flashed_messages() %}
+	<div class="alert alert-ilight">
+		{{ message }}
+
+	</div>
+	{% endfor %}
+	{% endif %}
+	{% endwith %}
+</div>
+  <div style="display: none;" id="table">
+  <B class="ml-4">Output : </B>
+  <div id="output" style="margin: 30px;" data-data='{{data}}'></div>
+</div>
+  <script type="text/javascript" src="../static/main.js"></script>
+</div>
