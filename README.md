@@ -9,3 +9,7 @@ A Sample Demo GIF of the Pivot Table:
 ![til](https://github.com/deepkchoudhary/pivot-table/blob/main/images/pivot-table-example.gif)
 
 Few Images of the Web Application are as follows:
+
+<img src="https://github.com/deepkchoudhary/pivot-table/blob/main/images/pivottable-barchart.png">
+
+<img src="https://github.com/deepkchoudhary/pivot-table/blob/main/images/pivottable-heatmap.png">
